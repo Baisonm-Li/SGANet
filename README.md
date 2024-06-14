@@ -14,16 +14,15 @@ The implementation of "SGANet: Hyperspectral Image Super-Resolution via Spectral
 - Harvard: [https://vision.seas.harvard.edu/hyperspec/download.html](https://vision.seas.harvard.edu/hyperspec/download.html)
 - PaviaU: [http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes](http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes)
 - Urban: [http://www.erdc.usace.army.mil/Media/Fact-Sheets/Fact-Sheet-Article-View/Article/610433/hypercube/#](http://www.erdc.usace.army.mil/Media/Fact-Sheets/Fact-Sheet-Article-View/Article/610433/hypercube/#)
-- Chikusei: [https://naotoyokoya.com/Download.html](https://naotoyokoya.com/Download.html)
 
 ## Directory Structure
 
 ```
-datasets / # Training and testing data
-models   / # Implementation of models
-data     / # Implementation of data classes
-main.py  / # Main entry point for the model
-util     / # Collection of utility functions
+datasets  # Training and testing data
+models    # Implementation of models
+data      # Implementation of data classes
+main.py   # Main entry point for the model
+util      # Collection of utility functions
 ```
 
 ## Training Command
