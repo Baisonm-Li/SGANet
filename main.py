@@ -6,17 +6,8 @@ from torch.optim.lr_scheduler import StepLR
 from torch.utils.data import Dataset,DataLoader
 import os
 import logging
-from models.SSRNet import SSRNet
-from models.ResTFNet import ResTFNet
-from models.HSRNet import HSRNet
-from models.FuseFormer import FuseFormer
 from models.SGANet import SGANet
-from models.MHFNet import MHFNet
-from models.CSSNet import CSSNet
-from models.SGANet_v2 import SGANetV2
-from models.DCTFormer import DCTFormer
-from models.TestFormer import TestFormer
-from models.ShiftModel import ShiftModel
+
 
 import logging
 from data import H5Dataset,NPZDataset
@@ -61,32 +52,9 @@ if args.dataset == "Urban":
     test_dataset_path = './datasets/Urban_test.npz'
     train_dataset_path = './datasets/Urban_test.npz'
     HSI_bands = 162
-if args.dataset == "Chikusei":
-    test_dataset_path = './datasets/Chikusei_test.npz'
-    train_dataset_path = './datasets/Chikusei_train.npz'
-    HSI_bands = 31
-
 
 if model_name.startswith('SGANet'):
     model = SGANet(HSI_bands,hidden_dim=64)
-if model_name.startswith('SSRNet'):
-    model = SSRNet(HSI_bands,)
-if model_name.startswith('HSRNet'):
-    model = HSRNet(HSI_bands)
-if model_name.startswith('FuseFormer'):
-    model = FuseFormer(HSI_bands)
-if model_name.startswith('MHFNet'):
-    model = MHFNet(HSI_bands)
-if model_name.startswith('CSSNet'):
-    model = CSSNet(HSI_bands)
-if model_name.startswith('ResTFNet'):
-    model = ResTFNet(HSI_bands)
-if model_name.startswith('DCTFormer'):
-    model = DCTFormer(HSI_bands)
-if model_name.startswith('TestFormer'):
-    model = TestFormer(HSI_bands)
-if model_name.startswith('ShiftModel'):
-    model = ShiftModel(HSI_bands)
     
 model = model.to(device)
 set_seed(args.seed)
